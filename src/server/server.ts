@@ -4,9 +4,7 @@ import { app } from "../app/app";
 const rawPort = process.env.SERVICE_PORT ?? "3000";
 const port = Number.parseInt(rawPort, 10);
 if (Number.isNaN(port) || port <= 0) {
-  console.error(
-    `Invalid SERVICE_PORT value (${rawPort}), falling back to 3000`,
-  );
+  console.error(`Invalid SERVICE_PORT value (${rawPort}), falling back to 3000`);
 }
 
 const listenPort = Number.isNaN(port) ? 3000 : port;
